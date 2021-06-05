@@ -24,4 +24,25 @@ public class BookService {
 
     }
 
+    // GET methods
+    public List<Books>getBooks(){
+        return bookRepository.findAll();
+    }
+
+    // public Books getBookById(int id){
+    //     return bookRepository.findById(id);
+    // }
+
+    // DELETE
+    public String deleteProduct(int id){
+         bookRepository.deleteById(id);
+         return "deleted removed";
+    }
+
+    // UPDATE
+    // public Books updateBooks(Books book){
+    //     Books existingBooks = bookRepository.findById(object);
+        
+    // }
+
 }
