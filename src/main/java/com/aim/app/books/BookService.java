@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookService {
@@ -29,9 +30,9 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    // public Books getBookById(int id){
-    //     return bookRepository.findAllById(id);
-    // }
+    public Optional<Books> getBookById(int id) {
+        return bookRepository.findById(id);
+    }
 
     // DELETE
     public String deleteProduct(int id){
@@ -39,9 +40,7 @@ public class BookService {
          return "deleted removed";
     }
 
-    // public List<Books> saveBooks(Books book) {
-    //     return null;
-    // }
+
 
     // UPDATE
     // public Books updateBooks(Books book){
