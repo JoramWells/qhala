@@ -19,7 +19,7 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public List<Books> saveBooks(List<Books> books){
+    public List<Books> saveBooks(List <Books> books){
         return bookRepository.saveAll(books);
 
     }
@@ -30,7 +30,7 @@ public class BookService {
     }
 
     // public Books getBookById(int id){
-    //     return bookRepository.findById(id);
+    //     return bookRepository.findAllById(id);
     // }
 
     // DELETE
@@ -38,6 +38,10 @@ public class BookService {
          bookRepository.deleteById(id);
          return "deleted removed";
     }
+
+    // public List<Books> saveBooks(Books book) {
+    //     return null;
+    // }
 
     // UPDATE
     // public Books updateBooks(Books book){
